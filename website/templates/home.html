@@ -1,0 +1,86 @@
+{% extends "base.html" %} 
+{% block title %}Home{% endblock %} 
+
+{% block content%}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">DCMS SYSTEM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="http://127.0.0.1:5000/">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href=http://127.0.0.1:5000/staff>Dental Staff</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/patients">Patients</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/reception">Receptionist</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <li class="list-group-item">
+    {{ note.data }}
+    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+-->
+<h1 style="padding-top: 30px" align="center">Welcome!</h1>
+
+<div class="card-deck"style="padding-top: 50px">
+  <div class="card">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="https://www.teethfirstdental.com/img/blog/employer-benefits.jpg" class="img-fluid"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Receptionist</h5>
+      <p class="card-text">Click here to access the receptionist user interface and witness the power of databases!</p>
+      <a href="http://127.0.0.1:5000/reception" class="btn btn-primary">Select</a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="https://www.teethfirstdental.com/img/blog/dentists.jpg" class="img-fluid"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Dental Staff</h5>
+      <p class="card-text">Pick me if you are a dental staff and would like to access your services thanks to databases!.</p>
+      <a href="http://127.0.0.1:5000/staff" class="btn btn-primary">Select</a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="https://www.teethfirstdental.com/img/blog/dental-patient.jpg" class="img-fluid"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Patients</h5>
+      <p class="card-text">Choose me if you are a patient and would like to see how databases are contributing to your smile!</p>
+      <a href="http://127.0.0.1:5000/patients" class="btn btn-primary">Select</a>
+    </div>
+  </div>
+</div>
+</form>
+
+{% endblock %}
+

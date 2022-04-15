@@ -1,0 +1,93 @@
+{% extends "base.html" %} 
+{% block title %} Reception {% endblock %} 
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">DCMS SYSTEM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="http://127.0.0.1:5000/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href=http://127.0.0.1:5000/staff>Dental Staff</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/patients">Patients</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/reception">Receptionis<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h1 style="margin: 70px" align=" center">New patient Form: </h1>
+
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="email@gmail.com">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-group" style="margin=100px">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">Province</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="Ontario">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputZip">Postal Code:</label>
+        <input type="text" class="form-control" id="inputZip" placeholder="A9A 9A9">
+      </div>
+    </div>
+    <div class="form-group col-md-10">
+      <label for="branchName">Branch Name</label>
+      <select id="branchName" class="form-control">
+
+        <option branch_id="1" branch_location="Ottawa"selected>Ottawa</option>
+        <option branch_id="2" branch_location="Toronto" selected>Toronto</option>
+        <option branch_id="3" branch_location="Kingston" selected>Kingston</option>
+        <option branch_id="4" branch_location="Missisauga" selected>Missisauga</option>
+        <option branch_id="5" branch_location="Brampton" selected>Brampton</option>
+        <option branch_id="6" branch_location="Cornwall" selected>Cornwall</option>
+        <option branch_id="7" branch_location="Halifax" selected>Halifax</option>
+        <option branch_id="8" branch_location="Vancouver" selected>Vancouver</option>
+      </select>
+    </div>
+   
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        I would like to receive email Newsletter updates from my branch!
+      </label>
+    </div>
+  </div>
+  <button type="submit" style="margin-left: 250px" class="btn btn-primary">Save new Patient</button>
+</form>
+
+{% endblock %}
+
+
