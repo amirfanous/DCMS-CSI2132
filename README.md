@@ -62,7 +62,7 @@ If any new requirements have been installed, run the following command (uses `pi
   
 ### Dev Environment
 - `python -v` 3.9 or greater
-- To clone the repo: `git clone https://github.com/shahirmikhail/csi2132-dcms-project.git`
+- To clone the repo: `git clone https://github.com/amirfanous/DCMS-CSI2132`
 - Change the current working directory to the local project root and run (only required for the first time):
     - Mac: `python3 -m venv venv`
     - Windows: `python -m venv venv`
