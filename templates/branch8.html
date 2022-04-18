@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+		content="width=device-width,
+				initial-scale=1,
+				shrink-to-fit=no">
+<title>
+	load data from json file
+	into a bootstrap table
+</title>
+
+<!-- Include Bootstrap for styling -->
+<link rel="stylesheet"
+		href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- Include the Bootstrap Table CSS
+for the table -->
+<link rel="stylesheet"
+		href=
+"https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+</head>
+<body>
+<div class="container">
+	<h1 class="text text-success text-center ">
+	DCMS
+	</h1>
+	<h6 class="text text-success text-center">
+	Here are the dentists from the Ottawa branch:
+	</h6>
+	<table class="table-striped border-success">
+		<thead>
+		<tr>
+			<th data-field="firstname">
+			<span class="text-success">
+				First Name
+			</span>
+			</th>
+			<th data-field="lastname">
+			<span class="text-success">
+				Last Name
+			</span>
+			</th>
+            <th data-field="role">
+                <span class="text-success">
+                    Role:
+            </span>
+
+            </th>
+            <th data-field="phonenum">
+                <span class="text-success">
+                    First Name
+            </span>
+            </th>
+            <th data-field="salary">
+                <span class="text-success">
+                Salary
+            </span>
+            </th>
+            <th data-field="employee_id">
+                <span class="text-success">
+                    Employee ID
+            </span>
+            </th>
+		</tr>
+		</thead>
+	</table>
+</div>
+
+<!-- Include jQuery and other required
+files for Bootstrap -->
+<script src=
+"https://code.jquery.com/jquery-3.3.1.min.js">
+</script>
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+</script>
+<script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+</script>
+
+<!-- Include the JavaScript file
+for Bootstrap table -->
+<script src=
+"https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js">
+</script>
+<script type="text/javascript">
+
+	$(document).ready(function () {
+	// Use the given data to create
+	// the table and display it
+
+	$('table').bootstrapTable({
+		data: mydata
+	});
+	});
+
+	// Specify the JSON data to be displayed
+	var mydata = 
+	[
+    {
+        "apartment": "2022",
+        "branch_id": "1",
+        "city": "Ottawa",
+        "dateofbirth": "2000-07-27",
+        "employee_id": 1,
+        "employee_type": "Dentist",
+        "firstname": "ali",
+        "gender": "Male",
+        "lastname": "farhoud",
+        "phonenum": "6134548983",
+        "province": "Ontario",
+        "role": "performs dental services to patients",
+        "salary": "150000.00",
+        "ssn": 303879109,
+        "streetname": "Clarence",
+        "streetnum": "87",
+        "user_id": "1",
+        "zipcode": "K1N739"
+    },
+    {
+        "apartment": "1899",
+        "branch_id": "1",
+        "city": "Ottawa",
+        "dateofbirth": "2000-01-01",
+        "employee_id": 6,
+        "employee_type": "Dentist",
+        "firstname": "Pedri",
+        "gender": "male",
+        "lastname": "Gonzalez",
+        "phonenum": "6139996767",
+        "province": "Ontario",
+        "role": "performs dental services to patients",
+        "salary": "100000.00",
+        "ssn": 948928499,
+        "streetname": "campnou",
+        "streetnum": "1899",
+        "user_id": "10",
+        "zipcode": "K8B9K7"
+    },
+    {
+        "apartment": "1899",
+        "branch_id": "1",
+        "city": "Ottawa",
+        "dateofbirth": "2000-01-01",
+        "employee_id": 7,
+        "employee_type": "Dentist",
+        "firstname": "Pique",
+        "gender": "male",
+        "lastname": "Shakira",
+        "phonenum": "6139996767",
+        "province": "Ontario",
+        "role": "performs dental services to patients",
+        "salary": "100000.00",
+        "ssn": 382000444,
+        "streetname": "campnou",
+        "streetnum": "1899",
+        "user_id": "10",
+        "zipcode": "K8B9K7"
+    },
+    {
+        "apartment": "1899",
+        "branch_id": "1",
+        "city": "Ottawa",
+        "dateofbirth": "2000-01-01",
+        "employee_id": 8,
+        "employee_type": "Dentist",
+        "firstname": "Pique",
+        "gender": "male",
+        "lastname": "Shakira",
+        "phonenum": "6139996767",
+        "province": "Ontario",
+        "role": "performs dental services to patients",
+        "salary": "100000.00",
+        "ssn": 382000444,
+        "streetname": "campnou",
+        "streetnum": "1899",
+        "user_id": "10",
+        "zipcode": "K8B9K7"
+    }
+];
+
+</script>
+</body>
+</html>
+
+

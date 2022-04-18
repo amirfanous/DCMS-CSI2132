@@ -8,6 +8,7 @@ def get_db_connection():
     #                         database=os.environ['DB_NAME'],
     #                         user=os.environ['DB_USERNAME'],
     #                         password=os.environ['DB_PASSWORD'])
+
     conn = psycopg2.connect(host='ec2-34-231-63-30.compute-1.amazonaws.com',
                             database="dfkjl7dui72stg",
                             user="pmhsdddzxbeguh",

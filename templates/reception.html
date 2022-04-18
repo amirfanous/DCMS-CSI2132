@@ -1,0 +1,65 @@
+{% extends "base.html" %} 
+{% block title %} Reception {% endblock %} 
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">DCMS SYSTEM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="http://127.0.0.1:5000/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href=http://127.0.0.1:5000/staff>Dental Staff</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/patients">Patients</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/reception">Receptionist<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h1 style="margin: 50px"> Welcome to the Reception! </h1>
+
+<div class="card" style="margin: 20px">
+  <div class="card-header">
+    New members
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Add a new patient</h5>
+    <p class="card-text">member to your DCMS family with our interactive new patient form!</p>
+    <a href="http://127.0.0.1:5000/addpatient" class="btn btn-primary">Select</a>
+  </div>
+</div>
+
+<div class="card" style="margin: 20px">
+  <div class="card-header">
+    Patient Records
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">View and edit patient records</h5>
+    <p class="card-text">Check out your patient records with out interactive table interface!</p>
+    <a href="http://127.0.0.1:5000/editpatients" class="btn btn-primary">Select</a>
+  </div>
+</div>
+
+<div class="card" style="margin: 20px">
+  <div class="card-header">
+    Scheduler
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Add new patient appointment</h5>
+    <p class="card-text">Schedule a new patient appointment with our interactive interface!</p>
+    <a href="http://127.0.0.1:5000/appointment" class="btn btn-primary">Select</a>
+  </div>
+</div>
+
+
+{% endblock %}

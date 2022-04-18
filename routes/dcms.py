@@ -1,5 +1,4 @@
-from app import app
-from flask import jsonify, request, make_response
+from flask import jsonify, request, make_response, Blueprint
 from controller.get_branch import *
 from controller.post_patient import *
 from controller.post_appointment import *
@@ -31,9 +30,9 @@ Dental Clinic Management System (DCMS) API
         - if successful, status code: 200 (OK)
         - if item not found, status code: 404 (NOT FOUND)
 """
+views = Blueprint('views', __name__)
 
-
-@app.route('/api/branches', methods=['GET'])
+@views.route('/api/branches', methods=['GET'])
 def branch_api():
     # http://127.0.0.1:5000/api/branches
     if request.method == 'GET':
@@ -41,7 +40,7 @@ def branch_api():
         response = make_response(jsonify(branches), 200)
         return response
 
-@app.route('/api/procedures', methods=['GET'])
+@views.route('/api/procedures', methods=['GET'])
 def procedure_api():
     # http://127.0.0.1:5000/api/procedures
     if request.method == 'GET':
@@ -49,22 +48,21 @@ def procedure_api():
         response = make_response(jsonify(procedures), 200)
         return response
 
-
-@app.route('/api/dentists/<branch_id>', methods=['GET'])
+@views.route('/api/dentists/<branch_id>', methods=['GET'])
 def dentist_api(branch_id):
     if request.method == 'GET':
         dentists = get_all_dentists_from_branch(branch_id)
         response = make_response(jsonify(dentists), 200)
         return response
 
-@app.route('/api/appointments/<employee_id>', methods=['GET'])
+@views.route('/api/appointments/<employee_id>', methods=['GET'])
 def upcoming_appointment_api(employee_id):
     if request.method == 'GET':
         appointment = get_upcoming_appointment(employee_id)
         response = make_response(jsonify(appointment), 200)
         return response
 
-@app.route('/api/patients', methods=['POST'])
+@views.route('/api/patients', methods=['POST'])
 def patient_api():
     # http://127.0.0.1:5000/api/branches
     if request.method == 'POST':
@@ -82,7 +80,7 @@ def patient_api():
         except ApiException as e:
             return jsonify({'message': str(e)}), 406
 
-@app.route('/api/employees', methods=['POST'])
+@views.route('/api/employees', methods=['POST'])
 def employee_api():
     # http://127.0.0.1:5000/api/employees
     if request.method == 'POST':
@@ -100,8 +98,7 @@ def employee_api():
         except ApiException as e:
             return jsonify({'message': str(e)}), 406
 
-
-@app.route('/api/appointments', methods=['POST'])
+@views.route('/api/appointments', methods=['POST'])
 def appointment_api():
     # http://127.0.0.1:5000/api/appointment
     if request.method == 'POST':
@@ -128,7 +125,6 @@ def appointment_api():
 #         else:
 #             return jsonify({'message': response['message']}), 400
 
-
-@app.route('/api/test/items', methods=['GET'])
+@views.route('/api/test/items', methods=['GET'])
 def test_item_api():
     return jsonify({'message': 'Item API is up and running.'}), 200

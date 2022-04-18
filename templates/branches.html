@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% block title %} Branches {% endblock %}
+{% from apicalls import * %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+		content="width=device-width,
+				initial-scale=1,
+				shrink-to-fit=no">
+<title>
+	load data from json file
+	into a bootstrap table
+</title>
+
+<!-- Include Bootstrap for styling -->
+<link rel="stylesheet"
+		href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- Include the Bootstrap Table CSS
+for the table -->
+<link rel="stylesheet"
+		href=
+"https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+</head>
+<body>
+<div class="container">
+	<h1 class="text text-success text-center ">
+	DCMS
+	</h1>
+	<h6 class="text text-success text-center">
+	Here are all the places we can serves you:
+	</h6>
+	<table class="table-striped border-success">
+		<thead>
+		<tr>
+			<th data-field="branch_id">
+			<span class="text-success">
+				Branch ID
+			</span>
+			</th>
+			<th data-field="branch_location">
+			<span class="text-success">
+				Branch Name
+			</span>
+			</th>
+		</tr>
+		</thead>
+	</table>
+</div>
+
+<!-- Include jQuery and other required
+files for Bootstrap -->
+<script src=
+"https://code.jquery.com/jquery-3.3.1.min.js">
+</script>
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+</script>
+<script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+</script>
+
+<!-- Include the JavaScript file
+for Bootstrap table -->
+<script src=
+"https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js">
+</script>
+
+<script type="text/javascript">
+//private static Retrofit storeRetrofit = null;
+
+	$(document).ready(function () {
+	// Use the given data to create
+	// the table and display it
+
+	$('table').bootstrapTable({
+		
+	});
+
+/*	let url = 'http://127.0.0.1:5000/api/branches';
+    var mydata;
+    fetch(url)
+    .then(res => res.json())
+    .then(out => {
+      mydata;
+}
+
+
+.catch(err => { */
+
+	// Specify the JSON data to be displayed
+	var mydata = 
+	[
+    {
+        "branch_id": 1,
+        "branch_location": "Ottawa"
+    },
+    {
+        "branch_id": 2,
+        "branch_location": "Toronto"
+    },
+    {
+        "branch_id": 3,
+        "branch_location": "Kingston"
+    },
+    {
+        "branch_id": 4,
+        "branch_location": "Mississauga"
+    },
+    {
+        "branch_id": 5,
+        "branch_location": "Brampton"
+    },
+    {
+        "branch_id": 6,
+        "branch_location": "Cornwall"
+    },
+    {
+        "branch_id": 7,
+        "branch_location": "Halifax"
+    },
+    {
+        "branch_id": 8,
+        "branch_location": "Vancouver"
+    }
+]
+//})
+});
+
+</script>
+</body>
+</html>
+
+
+{% endblock %}

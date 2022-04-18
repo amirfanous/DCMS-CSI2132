@@ -1,3 +1,4 @@
+{% from apicalls import apicalls %}
 {% extends "base.html" %} 
 {% block title %}Home{% endblock %} 
 
@@ -25,4 +26,14 @@
     </ul>
   </div>
 </nav>
+
+<ul class="list-group list-group-flush" id="branches">
+    {% apicalls() %}
+
+  <li class="list-group-item">
+    <button type="button" class="close" >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+</ul>
 {% endblock %}

@@ -7,13 +7,13 @@ from flask_login import LoginManager
 #//DB_NAME = "database.db"
 
 
-def create_app():
+'''def create_app():
     app = Flask(__name__)
   #  app.config['SECRET_KEY'] = 'hjshjhdjah kjshkjdhjs'
    # app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     #db.init_app(app)
 
-    from .views import views
+    from ..views import views
    # from .auth import auth
 
     app.register_blueprint(views, url_prefix='/')
@@ -30,7 +30,7 @@ def create_app():
     @login_manager.user_loader
     def load_user(id):
         return User.query.get(int(id))"""
-    return app
+    return app'''
 
 
 """def create_database(app):
